@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   const iterations = req.query.iterations;
   const timer = Math.random();
   console.time(`iterations-${iterations}-${timer}`);
